@@ -1,0 +1,19 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web|Ubuntu+Mono&display=swap');
+
+/* Tags */
+body {
+    --accent-color: #a20191;
+    --error-color: #d32150;
+    --alert-color: #9fb13c;
+}
+
+body.lightMode {
+    --bg-color: #ebe3c9;
+    --text-color: #0f0f0f;
+}
+
+body.darkMode {
+    --bg-color: #0f0f0f;
+    --text-color: #ebe3c9;
+}
