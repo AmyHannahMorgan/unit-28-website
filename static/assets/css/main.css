@@ -97,3 +97,64 @@ header > #logo > img {
     width: 90%;
     height: 90%;
 }
+
+header > nav {
+    display: block;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    min-height: 100vh;
+
+    background-color: var(--accent-color);
+}
+
+header > nav a, header > nav h1 {
+    color: #ebe3c9;
+    text-decoration: none;
+}
+
+/* classes */
+
+.navItem {
+
+}
+
+.navItem > .navHeader {
+    display: flex;
+    flex-direction: row;
+
+    border-bottom: solid medium #ebe3c9;
+}
+
+.navItem > .navHeader > * {
+    margin: 1rem;
+}
+
+.navItem > .navHeader > .navTitle {
+    flex: 1;
+}
+
+.navItem > .navHeader > .dropDownArrow {
+    transition: transform 0.25s ease-in-out;
+}
+
+.navItem > .navBody {
+    width: 100%;
+    height: 0;
+
+    transition: height 0.25s ease-in-out;
+}
+
+.navItem > .navBody > ul {
+    list-style-type: none;
+}
+
+.navItem > .navBody > ul > li {
+    border-bottom: solid thin #ebe3c9;
+}
+
+.navItem.active > .navHeader > .dropDownArrow {
+    transform: rotate(90deg);
+}
