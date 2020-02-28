@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 501 500">
+    <title>sandwich nav</title>
+    <g id="Layer_2" data-name="Layer 2">
+        <g id="Layer_1-2" data-name="Layer 1">
+            <circle cx="437" cy="250" r="63"/>
+            <circle cx="63" cy="250" r="63"/>
+            <rect x="63" y="187" width="374" height="126"/>
+            <circle cx="438" cy="63" r="63"/>
+            <circle cx="63" cy="63" r="63"/>
+            <rect x="63" width="374" height="126"/>
+            <circle cx="63" cy="437" r="63"/>
+            <circle cx="437" cy="437" r="63"/>
+            <rect x="63" y="374" width="374" height="126"/>
+        </g>
+    </g>
+</svg>
