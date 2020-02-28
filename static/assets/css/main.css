@@ -18,6 +18,8 @@ body {
     --alert-color: #9fb13c;
 
     background-color: var(--bg-color);
+
+    margin: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -38,4 +40,17 @@ p {
     color: var(--text-color);
 
     font-family: 'Titillium Web';
+}
+
+main {
+    margin: 1rem;
+}
+
+header {
+    min-width: 100vw;
+    min-height: 4rem;
+
+    display: grid;
+
+    background-color: var(--accent-color);
 }
