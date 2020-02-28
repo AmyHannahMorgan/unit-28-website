@@ -19,3 +19,23 @@ body {
 
     background-color: var(--bg-color);
 }
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-color);
+
+    font-family: 'Ubuntu Mono';
+}
+
+h1 {
+    border-bottom: solid thick var(--accent-color);
+}
+
+h2, h3 {
+    border-left: solid thick var(--accent-color);
+}
+
+p {
+    color: var(--text-color);
+
+    font-family: 'Titillium Web';
+}
