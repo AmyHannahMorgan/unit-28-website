@@ -113,6 +113,8 @@ header > nav {
     background-color: var(--accent-color);
 }
 
+header > nav.active { left: 0; }
+
 header > nav a, header > nav h1 {
     color: #ebe3c9;
     text-decoration: none;
