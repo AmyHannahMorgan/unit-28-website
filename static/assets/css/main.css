@@ -111,6 +111,8 @@ header > nav {
     overflow-x: scroll;
 
     background-color: var(--accent-color);
+
+    transition: left 0.125s ease;
 }
 
 header > nav.active { left: 0; }
