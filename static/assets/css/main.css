@@ -118,6 +118,22 @@ header > nav a, header > nav h1 {
     text-decoration: none;
 }
 
+nav > .navClose {
+    width: 100%;
+    max-height: 4rem;
+    min-height: 4rem;
+
+    border-bottom: solid thick #ebe3c9;
+}
+
+nav > .navClose > img {
+    object-fit: contain;
+    height: 3rem;
+    width: 3rem;
+
+    padding: 0.5rem;
+}
+
 /* classes */
 
 .navItem {
