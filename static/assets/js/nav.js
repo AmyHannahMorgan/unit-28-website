@@ -1,5 +1,5 @@
 const nav = document.querySelector('nav');
-const navItems = document.querySelectorAll('.navItem');
+const navItems = document.querySelectorAll('.navItem.dropdown');
 const navOpen = document.querySelector('#mobileNavButton');
 const navClose = nav.querySelector('.navClose');
 
