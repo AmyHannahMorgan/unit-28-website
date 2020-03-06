@@ -254,7 +254,7 @@ footer > #modeSelector {
     border-radius: 1rem;
     background-color: transparent;
 
-    box-shadow: inset 0px 0px 10px #303030;
+    box-shadow: inset 0px 0px 10px #0f0f0f;
 
     overflow: hidden;
 }
@@ -273,7 +273,7 @@ footer > #modeSelector {
     border: solid 0px transparent;
     border-radius: 50%;
 
-    box-shadow: 5px 0px 10px #303030;
+    box-shadow: 5px 0px 10px #0f0f0f;
 
     transition: left 0.125s ease, box-shadow 0.125s ease;
 
@@ -282,5 +282,5 @@ footer > #modeSelector {
 
 .toggleSelector.active > .toggleSelectorInner {
     left: 50%;
-    box-shadow: -5px 0px 10px #303030;
+    box-shadow: -5px 0px 10px #0f0f0f;
 }
