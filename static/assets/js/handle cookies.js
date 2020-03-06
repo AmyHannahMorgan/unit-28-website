@@ -1,3 +1,27 @@
+const body = document.querySelector('body');
+const cookieModal = document.querySelector('#cookiesModal');
+const cookieAccept = document.querySelector('#cookiesAccept');
+const cookieDecline = document.querySelector('#cookiesDecline');
+
+if(getCookie('acceptCookies') !== '') {
+    if(getCookie('acceptCookies') === 'true') body.setAttribute('data-cookies', 'true');
+    else body.setAttribute('data-cookies', 'false');
+}
+else if(getCookie('acceptCookies') === '') {
+    cookieAccept.addEventListener('click', () => {
+        setCookie('acceptCookies', 'true', 365);
+        body.setAttribute('data-cookies', 'true');
+        cookieModal.classList.remove('active');
+    });
+    cookieDecline.addEventListener('click', () => {
+        setCookie('acceptCookies', 'false', 365);
+        body.setAttribute('data-cookies', 'false');
+        cookieModal.classList.remove('active');
+    });
+
+    cookieModal.classList.add('active');
+}
+
 function setCookie(name, value, expDays) {
     let expires = ''
     if(expDays !== undefined) {
