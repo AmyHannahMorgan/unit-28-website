@@ -1,0 +1,22 @@
+{
+  "name": "unit-28-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AmyHannahMorgan/unit-28-website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AmyHannahMorgan/unit-28-website/issues"
+  },
+  "homepage": "https://github.com/AmyHannahMorgan/unit-28-website#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
