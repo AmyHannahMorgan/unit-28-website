@@ -284,3 +284,55 @@ footer > #modeSelector {
     left: 50%;
     box-shadow: -5px 0px 10px #0f0f0f;
 }
+
+.footerModal {
+    position: fixed;
+    bottom: -100%;
+
+    width: 100vw;
+    max-width: 100%;
+    padding-bottom: 25px;
+
+    background-color: var(--bg-color);
+    box-shadow: 0 -5px 10px#0f0f0f;
+
+    text-align: center;
+
+    transition: bottom 0.25s ease;
+}
+
+.footerModal.active {
+    bottom: 0;
+}
+
+/* IDs */
+#cookiesModal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#cookiesModal button {
+    font-family: 'Titillium Web';
+    font-size: 1rem;
+
+    border: none;
+    background-color: transparent;
+
+    margin: 0 1rem;
+}
+
+#cookiesModal #cookiesDecline {
+    color: var(--text-color);
+    text-decoration: underline;
+}
+
+#cookiesModal #cookiesAccept {
+    padding: 0.5rem 1.5rem;
+
+    background-color: #a20191;
+    color: #ebe3c9;
+    border: solid 0 transparent;
+    border-radius: 1rem;
+}
