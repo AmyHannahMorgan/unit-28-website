@@ -160,8 +160,10 @@ footer {
     background-color: var(--accent-color);
 }
 
-footer > p {
+footer  p {
     color: #ebe3c9;
+
+    margin: 0.25rem 0;
 }
 
 footer > .socialIcons {
@@ -178,6 +180,15 @@ footer > .socialIcons img {
     height: 3rem;
 
     margin: 0 1rem;
+}
+
+footer > #modeSelector {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+
+    margin-bottom: 0.5rem;
 }
 
 /* classes */
@@ -228,4 +239,48 @@ footer > .socialIcons img {
 
 .socialIcons {
     margin: 0.5rem 0;
+}
+
+.toggleSelector {
+    display: flex;
+    position: relative;
+
+    height: 2rem;
+    width: 4rem;
+
+    margin: 0 0.25rem;
+
+    border: solid 0px transparent;
+    border-radius: 1rem;
+    background-color: transparent;
+
+    box-shadow: inset 0px 0px 10px #0f0f0f;
+
+    overflow: hidden;
+}
+
+.toggleSelector > .toggleSelectorInner {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+
+    width: 1.9rem;
+    height: 1.9rem;
+    background-color: var(--alert-color);
+
+    border: solid 0px transparent;
+    border-radius: 50%;
+
+    box-shadow: 5px 0px 10px #0f0f0f;
+
+    transition: left 0.125s ease, box-shadow 0.125s ease;
+
+    pointer-events: none;
+}
+
+.toggleSelector.active > .toggleSelectorInner {
+    left: 50%;
+    box-shadow: -5px 0px 10px #0f0f0f;
 }
