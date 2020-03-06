@@ -182,7 +182,7 @@ footer > .socialIcons img {
     margin: 0 1rem;
 }
 
-footer > .modeSelector {
+footer > #modeSelector {
     display: flex;
     flex-direction: row;
 
@@ -254,7 +254,9 @@ footer > .modeSelector {
     border-radius: 1rem;
     background-color: transparent;
 
-    box-shadow: inset 0px 0px 10px #0f0f0f;
+    box-shadow: inset 0px 0px 10px #303030;
+
+    overflow: hidden;
 }
 
 .toggleSelector > .toggleSelectorInner {
@@ -271,9 +273,14 @@ footer > .modeSelector {
     border: solid 0px transparent;
     border-radius: 50%;
 
-    transition: left 0.125s ease;
+    box-shadow: 5px 0px 10px #303030;
+
+    transition: left 0.125s ease, box-shadow 0.125s ease;
+
+    pointer-events: none;
 }
 
 .toggleSelector.active > .toggleSelectorInner {
     left: 50%;
+    box-shadow: -5px 0px 10px #303030;
 }
