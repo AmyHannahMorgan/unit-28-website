@@ -48,6 +48,8 @@ p {
 
 main {
     margin: 1rem;
+
+    min-height: 100vh;
 }
 
 header {
@@ -138,6 +140,35 @@ nav > .navClose > img {
     padding: 0.5rem;
 }
 
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--accent-color);
+}
+
+footer > p {
+    color: #ebe3c9;
+}
+
+footer > .socialIcons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    font-size: 2rem;
+}
+
+footer > .socialIcons img {
+    object-fit: contain;
+    height: 3rem;
+
+    margin: 0 1rem;
+}
+
 /* classes */
 
 .navItem {
@@ -182,4 +213,8 @@ nav > .navClose > img {
 
 .navItem.active > .navHeader > .dropDownArrow {
     transform: rotate(90deg);
+}
+
+.socialIcons {
+    margin: 0.5rem 0;
 }
