@@ -1,0 +1,1 @@
+document.querySelector('#cDate').innerHTML = `${new Date().getFullYear()}`;
