@@ -11,10 +11,13 @@ function setCookie(name, value, expDays) {
 
 function getCookie(name) {
     if(checkCookie(name)) {
-        let test = `${name}=.*;`;
-        let reg = new RegExp(test, 'i');
-        let result = document.cookie.match(reg);
-        result.splice(result.length - 1, 1);
+        let test = `${name}=[a-zA-Z0-9]*(;|$)`;
+        let reg = new RegExp(test, '');
+        let result = document.cookie.match(reg)[0];
+        console.log(result);
+        if(result[result.length-1] === ';'){
+            result = result.slice(0, -1);
+        }
         result = result.split('=');
         return result[1];
     }
@@ -28,6 +31,6 @@ function deleteCookie(name) {
 }
 
 function checkCookie(name) {
-    let reg = new RegExp(name, 'i');
+    let reg = new RegExp(`${name}=`, '');
     return reg.test(document.cookie);
 }
