@@ -21,6 +21,12 @@ function getCookie(name) {
     else return '';
 }
 
+function deleteCookie(name) {
+    if(checkCookie(name)) {
+        document.cookie = `${name}=; expires=${new Date(0).toUTCString}; path=/`
+    }
+}
+
 function checkCookie(name) {
     let reg = new RegExp(name, 'i');
     return reg.test(document.cookie);
