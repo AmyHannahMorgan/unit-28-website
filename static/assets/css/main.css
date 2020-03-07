@@ -191,7 +191,8 @@ footer > #modeSelector {
 /* classes */
 
 .navItem {
-
+    position: relative;
+    flex: 1;
 }
 
 .navItem > .navHeader {
@@ -332,4 +333,101 @@ footer > #modeSelector {
     color: #ebe3c9;
     border: solid 0 transparent;
     border-radius: 1rem;
+}
+
+/* media queries */
+@media only screen and (min-width: 425px) {
+    main {
+        width: 75vw;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media only screen and (hover: hover) {
+    header {
+        display: block;
+        overflow: visible;
+        width: 100vw;
+        max-width: 100%;
+        height: auto;
+        max-height: none;
+    }
+
+    header > nav {
+        display: flex;
+        flex-direction: row;
+
+        width: 100vw;
+        max-width: 100%;
+        height: auto;
+        min-height: 0;
+        max-height: none;
+
+        overflow-x: visible;
+
+        position: static;
+    }
+
+    nav > * {
+        font-size: 0.75rem;
+    }
+
+    nav h1 {
+        border: none;
+    }
+    
+    nav > .navClose {
+        display: none;
+    }
+
+    .navItem > .navHeader {
+        border: none;
+    }
+
+    .navItem > .navHeader > .navTitle {
+        text-align: center;
+    }
+
+    .navItem > .navHeader > .dropDownArrow {
+        display: none;
+    }
+
+    .navItem > .navBody {
+        height: auto;
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+
+        transform-origin: top;
+        transform: scaleY(0);
+
+        transition: transform 0.125s ease;
+
+        background-color: var(--text-color);
+    }
+
+    .navItem > .navBody > ul > li { 
+        border: none;
+    }
+
+    .navItem > .navBody > ul > li * {
+        color: var(--bg-color);
+    }
+
+    .navItem:hover {
+        background-color: var(--text-color);
+    }
+
+    .navItem:hover > .navHeader * {
+        color: var(--bg-color);
+    }
+
+    .navItem:hover > .navBody { transform: scaleY(1); }
+
+    #mobileNavButton {
+        display: none !important;
+    }
 }
