@@ -9,6 +9,12 @@
 </head>
 <body class="lightMode">
     <header>
+        <div id="mobileNavButton">
+            <img src="/assets/icons/sandwich nav.svg" alt="Open navigation icon">
+        </div>
+        <div id="logo">
+            <img src="/assets/icons/logo.svg" alt="white text saying amy hannah morgan">
+        </div>
         <nav>
             <div class="navClose">
                 <img src="/assets/icons/nav close.svg" alt="close navigation icon">
@@ -46,12 +52,6 @@
                 </div>
             </div>
         </nav>
-        <div id="mobileNavButton">
-            <img src="/assets/icons/sandwich nav.svg" alt="Open navigation icon">
-        </div>
-        <div id="logo">
-            <img src="/assets/icons/logo.svg" alt="white text saying amy hannah morgan">
-        </div>
     </header>
     <main>
         <h1>Lorem ipsum</h1>
@@ -75,6 +75,13 @@
             <p>Dark</p>
         </div>
     </footer>
+    <div class="footerModal" id="cookiesModal">
+        <p>This site uses cookies to store preferences such as darkmode, do you accept these cookies?</p>
+        <div class="buttonHolder">
+            <button id="cookiesDecline">Decline</button> <button id="cookiesAccept">Accept</button>
+        </div>
+    </div>
+    <script src="/assets/js/handle cookies.js"></script>
     <script src="/assets/js/nav.js"></script>
     <script src="/assets/js/copyright.js"></script>
     <script src="/assets/js/darkmode.js"></script>
