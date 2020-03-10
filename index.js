@@ -11,6 +11,20 @@ if(Date.now() >= data.githubProjects.lastUpdated + data.githubProjects.refreshIn
     updateProjects(data.githubProjects.projects, data.githubProjects.refreshInterval, data);
 }
 
+app.get('/api/projects', (req, res) => {
+    res.send(JSON.stringify(data.githubProjects));
+});
+
+app.get('/api/projects/display', (req, res) => {
+    let resObj = {
+        projectNames: []
+    }
+    for(let i = 0; i < 5; i++) {
+        resObj.projectNames.push(data.githubProjects.projects[i].name);
+    }
+    res.send(JSON.stringify(resObj));
+})
+
 app.use(express.static(`${__dirname}/static`));
 
 app.listen(port);
