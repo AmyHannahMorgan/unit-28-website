@@ -20,7 +20,8 @@ app.get('/api/projects/display', (req, res) => {
     let resObj = {
         projectNames: []
     }
-    for(let i = 0; i < 5; i++) {
+    let end = data.githubProjects.projects.length > 4 ? 5 : data.githubProjects.projects.length;
+    for(let i = 0; i < end; i++) {
         resObj.projectNames.push(data.githubProjects.projects[i].name);
     }
     res.send(JSON.stringify(resObj));
