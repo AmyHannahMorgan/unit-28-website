@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const axios = require('axios');
 const githubApiAddress = 'https://api.github.com';
@@ -37,22 +38,40 @@ async function updateProjects(projectsArray, refreshInterval, dataObject) {
         },
         params: {
             sort: 'created'
+        },
+        auth: {
+            username: process.env.GH_CLIENT_ID,
+            password: process.env.GH_CLIENT_SECRET
         }
     });
-    projects.forEach(project => {
+    await projects.data.forEach(async project => {
         let obj = {
             name: '',
             description: ''
         }
         let descriptionPath = project.contents_url.replace('{+path}', 'description.html');
-        let test = await axios.get(descriptionPath);
-        if(test.status === 200) {
-            obj.name = project.name;
-            obj.description = descriptionPath;
-            array.push(obj);
-       } 
+        let test 
+        try {
+            test = await axios.get(descriptionPath, {
+                headers: {
+                    'Accept': 'application/vnd.github.v3+json'
+                },
+                auth: {
+                    username: process.env.GH_CLIENT_ID,
+                    password: process.env.GH_CLIENT_SECRET
+                }
+            });
+            console.log(test);
+            if(test.status === 200) {
+                obj.name = project.name;
+                obj.description = descriptionPath;
+                array.push(obj);
+            } 
+        } catch (error) {
+            console.log(error);
+        }
     });
-    projectsArray = array;
+    dataObject.githubProjects.projects = array;
     dataObject.githubProjects.lastUpdated = Date.now();
     updateData(dataObject);
     setTimeout(() => {
