@@ -31,7 +31,7 @@ app.use(express.static(`${__dirname}/static`));
 app.listen(port);
 
 async function updateProjects(projectsArray, refreshInterval, dataObject) {
-    let array = []
+    let array = [];
     let projects = await axios.get(`${githubApiAddress}/users/${dataObject.githubProjects.username}/repos`, {
         headers: {
             'Accept': 'application/vnd.github.v3+json'
@@ -44,13 +44,14 @@ async function updateProjects(projectsArray, refreshInterval, dataObject) {
             password: process.env.GH_CLIENT_SECRET
         }
     });
-    await projects.data.forEach(async project => {
+    for(let i = 0; i < projects.data.length; i++) {
         let obj = {
             name: '',
             description: ''
         }
-        let descriptionPath = project.contents_url.replace('{+path}', 'description.html');
-        let test 
+        let descriptionPath = projects.data[i].contents_url.replace('{+path}', 'description.html');
+        let test;
+
         try {
             test = await axios.get(descriptionPath, {
                 headers: {
@@ -63,16 +64,20 @@ async function updateProjects(projectsArray, refreshInterval, dataObject) {
             });
             console.log(test);
             if(test.status === 200) {
-                obj.name = project.name;
-                obj.description = descriptionPath;
+                obj.name = projects.data[i].name;
+                obj.description = test.data.url;
+                console.log(obj);
                 array.push(obj);
             } 
         } catch (error) {
-            console.log(error);
+            // console.log(error);
         }
-    });
-    dataObject.githubProjects.projects = array;
+    };
+    console.log({array});
+    dataObject.githubProjects.projects = [...array];
     dataObject.githubProjects.lastUpdated = Date.now();
+
+    console.log(dataObject);
     updateData(dataObject);
     setTimeout(() => {
         updateProjects(projectsArray, refreshInterval, dataObject);
