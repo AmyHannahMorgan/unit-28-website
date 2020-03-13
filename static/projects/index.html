@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Amy Hannah Morgan</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body class="lightMode">
+    <header>
+        <div id="mobileNavButton">
+            <img src="/assets/icons/sandwich nav.svg" alt="Open navigation icon">
+        </div>
+        <div id="logo">
+            <img src="/assets/icons/logo.svg" alt="white text saying amy hannah morgan">
+        </div>
+        <nav>
+            <div class="navClose">
+                <img src="/assets/icons/nav close.svg" alt="close navigation icon">
+            </div>
+            <div class="navItem dropdown">
+                <div class="navHeader">
+                    <h1 class="navTitle"><a href="/qualifications">Qualifications</a></h1>
+                    <h1 class="dropDownArrow">></h1>
+                </div>
+                <div class="navBody">
+                    <ul>
+                        <li><h1><a href="/qualifications/cv.pdf">CV</a></h1></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navItem dropdown">
+                <div class="navHeader">
+                    <h1 class="navTitle"><a href="/projects">Projects</a></h1>
+                    <h1 class="dropDownArrow">></h1>
+                </div>
+                <div class="navBody">
+                    <ul id="projects">
+                    </ul>
+                </div>
+            </div>
+            <div class="navItem">
+                <div class="navHeader">
+                    <h1 class="navTitle"><a href="/achievements">Achievements</a></h1>
+                </div>
+            </div>
+            <div class="navItem">
+                <div class="navHeader">
+                    <h1 class="navTitle"><a href="/store">Store</a></h1>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="projectHolder template">
+            <div class="projectHeader">
+                <h1 class="projectTitle">test project</h1>
+                <h1 class="dropDownArrow">></h1>
+            </div>
+            <div class="projectBody">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto nisi aspernatur quasi. Velit facere earum nostrum distinctio iusto eaque quod aliquid eligendi quisquam quam cumque, deserunt quibusdam eius nam placeat.</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="socialIcons">
+            <a href="https://twitter.com/AmyHMorgan"><img src="/assets/social media icons/twitter.svg" alt=""></a> <a href="https://github.com/AmyHannahMorgan"><img src="/assets/social media icons/github.svg" alt=""></a> <a href="https://www.linkedin.com/in/amy-morgan-94153017a/"><img src="/assets/social media icons/linkedin.svg" alt=""></a> 
+        </div>
+        <p>copyright Amy Morgan, <span id="cDate"></span></p>
+        <div id="modeSelector">
+            <p>Light</p>
+            <div class="toggleSelector">
+                <div class="toggleSelectorInner">
+
+                </div>
+            </div>
+            <p>Dark</p>
+        </div>
+    </footer>
+    <div class="footerModal" id="cookiesModal">
+        <p>This site uses cookies to store preferences such as darkmode, do you accept these cookies?</p>
+        <div class="buttonHolder">
+            <button id="cookiesDecline">Decline</button> <button id="cookiesAccept">Accept</button>
+        </div>
+    </div>
+    <script src="/assets/js/handle cookies.js"></script>
+    <script src="/assets/js/nav.js"></script>
+    <script src="/assets/js/copyright.js"></script>
+    <script src="/assets/js/darkmode.js"></script>
+    <script src="/assets/js/projectHandler.js"></script>
+</body>
+</html>
