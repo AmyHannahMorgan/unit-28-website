@@ -1,1 +1,36 @@
-{"githubProjects":{"username":"amyhannahmorgan","refreshInterval":43200000,"lastUpdated":0,"projects":[{"name":"example","description":"https://github.com/{username}/example/description.md"}]}}
+{
+    "githubProjects":
+        {
+            "username":"amyhannahmorgan",
+            "refreshInterval":43200000,
+            "lastUpdated":1584104906746,
+            "projects":[
+                {
+                    "name":"unit-28-website",
+                    "description":"PGgyPlBlcnNvbmFsIHBvcnRmb2xpbyBjcmVhdGVkIGZvciB1bml0IDI4IG9m\nIHRoZSBsZXZlbCAzIGV4dGVuZGVkIGRpcGxvbWEgSVQgQlRFQzwvaDI+\n"
+                },
+                {
+                    "name":"hidden-hortler",
+                    "description":"PGgyPldlYiBiYXNlZCBjbG9uZSBvZiB0aGUgc29jaWFsIGRlZHVjdGlvbiBi\nb2FyZCBnYW1lIFNlY3JldCBIaXRsZXI8L2gyPg==\n"
+                    }
+            ]
+        },
+    "cv": {
+        "details": {
+            "name": "Amy Hannah Morgan",
+            "phone": "",
+            "email": "",
+            "github": "",
+            "twitter": ""
+        },
+        "experience": {
+
+        },
+        "qualifications": {
+
+        },
+        "achievements": {
+            
+        }
+    }
+}
