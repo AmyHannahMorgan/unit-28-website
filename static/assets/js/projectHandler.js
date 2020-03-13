@@ -17,6 +17,7 @@ projectsCall.addEventListener('load', e => {
         let projectBody = newProjectElem.querySelector('.projectBody');
 
         newProjectElem.classList.remove('template');
+        newProjectElem.setAttribute('project-name', projects[i].name);
         projectTitle.innerText = projects[i].name;
         projectBody.innerHTML = atob(projects[i].description);
         main.appendChild(newProjectElem);
@@ -36,7 +37,28 @@ projectsCall.addEventListener('load', e => {
                 body.style.height = `${body.scrollHeight}px`;
             }
             else body.style.height = ''
-        })
+        });
     }
+    moveToProject();
 });
 projectsCall.send();
+
+function moveToProject() {
+    console.log('i ran');
+    let params = new URLSearchParams(window.location.search);
+    console.log(params);
+
+    if(params.has('project')) {
+        let projects = document.querySelectorAll('.projectHolder');
+
+        for(let i = 0; i < projects.length; i++) {
+            if(projects[i].getAttribute('project-name') === params.get('project')) {
+                projects[i].classList.add('active');
+                projects[i].querySelector('.projectBody').style.height = `${projects[i].querySelector('.projectBody').scrollHeight}px`;
+                projects[i].scrollIntoView(true);
+                console.log(projects[i]);
+                break;
+            }
+        }
+    }
+}
