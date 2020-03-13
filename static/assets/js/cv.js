@@ -1,10 +1,20 @@
 const cvElem = document.querySelector('#cv');
+const headerElem = document.querySelector('#header');
+const experienceElem = document.querySelector('#experience');
 const qualificationsElem = document.querySelector('#qualifications');
+const skillsElem = document.querySelector('#skills');
 const achievementsElem = document.querySelector('#achievements');
 let request = new XMLHttpRequest();
 
 if(cvElem !== null) {
-
+    request.open('GET', `${apiAddress}/cv`);
+    request.addEventListener('load', e => {
+        let response = JSON.parse(e.target.response);
+        buildHeader(response.details);
+        buildExperience(response.experience);
+        buildQualifications(response.qualifications);
+    });
+    request.send();
 }
 else if(qualificationsElem !== null) {
     request.open('GET', `${apiAddress}/cv/qualifications`);
@@ -53,4 +63,41 @@ function buildQualifications(qualArray) {
         qualHolder.appendChild(qualDates);
         qualificationsElem.appendChild(qualHolder);
     }
+}
+
+function buildExperience(expArray) {
+    for(let i = 0; i < expArray.length; i++) {
+        let expHolder = document.createElement('div');
+        expHolder.classList.add('experience');
+
+        let expTitle = document.createElement('h2');
+        expTitle.classList.add('titleAndLocation');
+        expTitle.innerText = `${expArray[i].jobTitle} - ${expArray[i].location}`;
+
+        let expDates = document.createElement('p');
+        expDates.classList.add('dates');
+
+        let startDate = new Date(expArray[i].startDate.year, expArray[i].startDate.month, expArray[i].startDate.day);
+        let startDateString = startDate.toDateString().split(' ');
+        startDateString = [startDateString[1], startDateString[3]].join(' ');
+
+        let endDate = expArray[i].endDate === null ? 'present' : new Date(expArray[i].endDate.year, expArray[i].endDate.month, expArray[i].endDate.day);
+        let endDateString;
+        if(endDate !== 'present') {
+            endDateString = endDate.toDateString().split(' ');
+            endDateString = [endDateString[1], endDateString[3]].join(' ');
+        }
+        else endDateString = endDate
+
+        expDates.innerText = `${startDateString} - ${endDateString}`;
+
+        expHolder.appendChild(expTitle);
+        expHolder.appendChild(expDates);
+        experienceElem.appendChild(expHolder);
+    }
+}
+
+function buildHeader(details) {
+    let headerTitle = headerElem.querySelector('.title');
+    headerTitle.innerText = details.name;
 }
