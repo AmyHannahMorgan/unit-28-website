@@ -35,6 +35,10 @@ app.get('/api/cv/qualifications', (req, res) => {
     res.send(data.cv.qualifications);
 });
 
+app.get('/api/cv/achievements', (req, res) => {
+    res.send(data.cv.achievements);
+});
+
 app.use(express.static(`${__dirname}/static`));
 
 app.listen(port);
