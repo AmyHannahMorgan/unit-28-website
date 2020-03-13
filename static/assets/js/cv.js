@@ -100,4 +100,20 @@ function buildExperience(expArray) {
 function buildHeader(details) {
     let headerTitle = headerElem.querySelector('.title');
     headerTitle.innerText = details.name;
+
+    let contacts = headerElem.querySelector('.contacts');
+    let keys = Object.keys(details);
+
+    for(let i = 1; i < keys.length; i++) {
+        let contactHolder = document.createElement('div');
+        contactHolder.classList.add('contact');
+
+        // put img holder and images here
+
+        let contactText = document.createElement('p');
+        contactText.innerText = details[keys[i]];
+
+        contactHolder.appendChild(contactText);
+        contacts.appendChild(contactHolder);
+    }
 }
