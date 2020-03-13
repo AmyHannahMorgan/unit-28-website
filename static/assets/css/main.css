@@ -68,7 +68,7 @@ header {
 
     position: sticky;
     top: 0;
-    z-index: 0;
+    z-index: 1;
 
     background-color: var(--accent-color);
 }
@@ -239,6 +239,46 @@ footer > #modeSelector {
 .navItem.active > .navHeader > .dropDownArrow {
     transform: rotate(90deg);
 }
+
+.projectHolder {
+
+}
+
+.projectHolder > .projectHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    border-bottom: solid thick var(--accent-color);
+}
+
+.projectHolder > .projectHeader > h1 {
+    margin: 0;
+    border: none;
+}
+
+.projectHolder > .projectHeader > .projectTitle {
+    flex: 1;
+}
+
+.projectHolder > .projectHeader > .dropDownArrow {
+    transition: transform 0.25s ease-in-out;
+}
+
+.projectHolder.active > .projectHeader > .dropDownArrow {
+    transform: rotate(90deg);
+}
+
+.projectHolder > .projectBody {
+    height: 0;
+
+    overflow: hidden;
+
+    transition: height 0.25s ease-in-out;
+}
+
+.projectHolder.template { display: none; }
 
 .socialIcons {
     margin: 0.5rem 0;
