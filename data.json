@@ -18,19 +18,70 @@
     "cv": {
         "details": {
             "name": "Amy Hannah Morgan",
-            "phone": "",
-            "email": "",
-            "github": "",
-            "twitter": ""
+            "email": "amy.hannah.morgan at gmail dot com",
+            "github": "AmyHannahMorgan",
+            "twitter": "",
+            "site": "amyhannahmorgan.glitch.me"
         },
-        "experience": {
-
-        },
-        "qualifications": {
-
-        },
-        "achievements": {
-            
-        }
+        "experience": [
+            {
+                "location": "Changing Gearz",
+                "startDate": {
+                    "year": 2015,
+                    "month": 10,
+                    "day": 1,
+                    "dateString": "01/11/15"
+                },
+                "endDate": {
+                    "year": 2017,
+                    "month": 5,
+                    "day": 2,
+                    "dateString": "02/06/17"
+                },
+                "jobTitle": "IT Technician",
+                "jobDescription": ""
+            }
+        ],
+        "qualifications": [
+            {
+                "location": "Coleg Gwent",
+                "startDate": {
+                    "year": 2018,
+                    "month": 8,
+                    "day": 2,
+                    "dateString": "02/09/18"
+                },
+                "endDate": {
+                    "year": 2019,
+                    "month": 5,
+                    "day": 1,
+                    "dateString": "01/06/19"
+                },
+                "qualification": "BTEC Level 2 IT",
+                "grade": "D*D*"
+            },
+            {
+                "location": "Coleg Gwent",
+                "startDate": {
+                    "year": 2019,
+                    "month": 8,
+                    "day": 1,
+                    "dateString": "01/09/19"
+                },
+                "endDate": null,
+                "qualification": "BTEC Level 3 Extended Diploma IT",
+                "grade": "DDD (predicted)"
+            }
+        ],
+        "achievements": [
+            {
+                "achievement": "Student's Union Memeber 2019 - 2020",
+                "description": ""
+            },
+            {
+                "achievement": "Skills Wales 2020 IT Support Technician Medal Winner",
+                "description": ""
+            }
+        ]
     }
 }
