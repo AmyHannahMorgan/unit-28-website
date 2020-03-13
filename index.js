@@ -25,7 +25,15 @@ app.get('/api/projects/display', (req, res) => {
         resObj.projectNames.push(data.githubProjects.projects[i].name);
     }
     res.send(resObj);
-})
+});
+
+app.get('/api/cv', (req, res) => {
+    res.send(data.cv);
+});
+
+app.get('/api/cv/qualifications', (req, res) => {
+    res.send(data.cv.qualifications);
+});
 
 app.use(express.static(`${__dirname}/static`));
 
