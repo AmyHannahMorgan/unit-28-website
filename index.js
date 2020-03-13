@@ -13,7 +13,7 @@ if(Date.now() >= data.githubProjects.lastUpdated + data.githubProjects.refreshIn
 }
 
 app.get('/api/projects', (req, res) => {
-    res.send(JSON.stringify(data.githubProjects));
+    res.send(data.githubProjects);
 });
 
 app.get('/api/projects/display', (req, res) => {
@@ -24,7 +24,7 @@ app.get('/api/projects/display', (req, res) => {
     for(let i = 0; i < end; i++) {
         resObj.projectNames.push(data.githubProjects.projects[i].name);
     }
-    res.send(JSON.stringify(resObj));
+    res.send(resObj);
 })
 
 app.use(express.static(`${__dirname}/static`));
