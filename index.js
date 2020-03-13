@@ -13,7 +13,7 @@ if(Date.now() >= data.githubProjects.lastUpdated + data.githubProjects.refreshIn
 }
 
 app.get('/api/projects', (req, res) => {
-    res.send(data.githubProjects);
+    res.send(data.githubProjects.projects);
 });
 
 app.get('/api/projects/display', (req, res) => {
@@ -66,7 +66,7 @@ async function updateProjects(projectsArray, refreshInterval, dataObject) {
             console.log(test);
             if(test.status === 200) {
                 obj.name = projects.data[i].name;
-                obj.description = test.data.url;
+                obj.description = test.data.content;
                 console.log(obj);
                 array.push(obj);
             } 
