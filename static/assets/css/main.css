@@ -419,6 +419,44 @@ footer > #modeSelector {
     width: 1em;
 }
 
+#cv > #skills {
+    display: flex;
+    flex-direction: column;
+}
+
+#cv > #skills > .skillHolder {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    align-items: center;
+
+    padding: 0.25em 0;
+
+    border-bottom: solid thin var(--accent-color);
+}
+
+#cv > #skills > .skillHolder > .levelHolder {
+    display: flex;
+    flex-direction: row;
+}
+
+#cv > #skills > .skillHolder > * {
+    margin: 0;
+}
+
+#cv > #skills > .skillHolder > p {
+    flex: 1;
+}
+
+#cv > #skills > .skillHolder > .levelHolder > img {
+    object-fit: contain;
+    height: 1em;
+    width: 1em;
+
+    margin: 0 0.125em;
+}
+
 /* media queries */
 @media only screen and (min-width: 425px) {
     main {
