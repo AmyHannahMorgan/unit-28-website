@@ -14,7 +14,7 @@ if(cvElem !== null) {
         buildHeader(response.details);
         buildExperience(response.experience);
         buildQualifications(response.qualifications);
-        if(params.get('cvType') !== null && params.get('cvType') === 'technical') buildSkills(response.skills.technical)
+        if(params.get('cvType') !== null && params.get('cvType') === 'technical') buildSkills(response.skills.technical);
         else buildSkills(response.skills.nontechnical);
     });
     request.send();
@@ -136,10 +136,10 @@ function buildSkills(skillsArray) {
         levelHolder.classList.add('levelHolder');
 
         if(skill.level !== null) {    
-            for(let i = 9; i < 5; i++) {
+            for(let i = 0; i < 5; i++) {
                 let type = i < skill.level ? 'full' : 'clear';
 
-                let icon = document.createEvent('img');
+                let icon = document.createElement('img');
                 icon.src = `${window.origin}/assets/icons/cv/skills/${type}.svg`;
 
                 levelHolder.appendChild(icon);
