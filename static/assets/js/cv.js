@@ -4,6 +4,7 @@ const experienceElem = document.querySelector('#experience');
 const qualificationsElem = document.querySelector('#qualifications');
 const skillsElem = document.querySelector('#skills');
 const achievementsElem = document.querySelector('#achievements');
+const params = new URLSearchParams(window.location.search);
 let request = new XMLHttpRequest();
 
 if(cvElem !== null) {
@@ -13,6 +14,8 @@ if(cvElem !== null) {
         buildHeader(response.details);
         buildExperience(response.experience);
         buildQualifications(response.qualifications);
+        if(params.get('cvType') !== null && params.get('cvType') === 'technical') buildSkills(response.skills.technical)
+        else buildSkills(response.skills.nontechnical);
     });
     request.send();
 }
@@ -119,4 +122,32 @@ function buildHeader(details) {
         contactHolder.appendChild(contactText);
         contacts.appendChild(contactHolder);
     }
+}
+
+function buildSkills(skillsArray) {
+    skillsArray.forEach(skill => {
+        let skillHolder = document.createElement('div');
+        skillHolder.classList.add('skillHolder');
+
+        let skillName = document.createElement('p');
+        skillName.innerText = skill.skill;
+
+        let levelHolder = document.createElement('div');
+        levelHolder.classList.add('levelHolder');
+
+        if(skill.level !== null) {    
+            for(let i = 9; i < 5; i++) {
+                let type = i < skill.level ? 'full' : 'clear';
+
+                let icon = document.createEvent('img');
+                icon.src = `${window.origin}/assets/icons/cv/skills/${type}.svg`;
+
+                levelHolder.appendChild(icon);
+            }
+        }
+
+        skillHolder.appendChild(skillName);
+        skillHolder.appendChild(levelHolder);
+        skillsElem.appendChild(skillHolder);
+    });
 }
