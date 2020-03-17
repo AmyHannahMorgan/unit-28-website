@@ -108,7 +108,6 @@ function buildHeader(details) {
         let contactHolder = document.createElement('div');
         contactHolder.classList.add('contact');
 
-        // put img holder and images here
         let img = document.createElement('img');
         img.src = `${window.origin}/assets/icons/cv/${keys[i]}.svg`;
         console.log(img.src);
