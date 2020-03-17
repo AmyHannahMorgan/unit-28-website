@@ -109,10 +109,14 @@ function buildHeader(details) {
         contactHolder.classList.add('contact');
 
         // put img holder and images here
+        let img = document.createElement('img');
+        img.src = `${window.origin}/assets/icons/cv/${keys[i]}.svg`;
+        console.log(img.src);
 
         let contactText = document.createElement('p');
         contactText.innerText = details[keys[i]];
 
+        contactHolder.appendChild(img);
         contactHolder.appendChild(contactText);
         contacts.appendChild(contactHolder);
     }
