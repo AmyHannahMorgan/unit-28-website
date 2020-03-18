@@ -40,9 +40,15 @@ function buildQualifications(qualArray) {
         qualTitle.classList.add('titleAndGrade');
         qualTitle.innerText = `${qualArray[i].qualification} - ${qualArray[i].grade}`;
 
+        let infoHolder = document.createElement('div');
+        infoHolder.classList.add('infoHolder');
+
         let qualLocation = document.createElement('p');
         qualLocation.classList.add('location');
         qualLocation.innerText = `${qualArray[i].location}`;
+
+        let divider = document.createElement('p');
+        divider.innerText = ' | '
 
         let qualDates = document.createElement('p');
         qualDates.classList.add('dates');
@@ -62,8 +68,10 @@ function buildQualifications(qualArray) {
         qualDates.innerText = `${startDateString} - ${endDateString}`;
 
         qualHolder.appendChild(qualTitle);
-        qualHolder.appendChild(qualLocation);
-        qualHolder.appendChild(qualDates);
+        infoHolder.appendChild(qualLocation);
+        infoHolder.appendChild(divider);
+        infoHolder.appendChild(qualDates);
+        qualHolder.appendChild(infoHolder);
         qualificationsElem.appendChild(qualHolder);
     }
 }
