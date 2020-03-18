@@ -16,6 +16,7 @@ if(cvElem !== null) {
         buildQualifications(response.qualifications);
         if(params.get('cvType') !== null && params.get('cvType') === 'technical') buildSkills(response.skills.technical);
         else buildSkills(response.skills.nontechnical);
+        buildAchievements(response.achievements);
     });
     request.send();
 }
@@ -158,4 +159,18 @@ function buildSkills(skillsArray) {
         skillHolder.appendChild(levelHolder);
         skillsElem.appendChild(skillHolder);
     });
+}
+
+function buildAchievements(achievementsArray) {
+    let achievementsHolder = document.createElement('div');
+    achievementsHolder.classList.add('achievementsHolder');
+
+    achievementsArray.forEach(achievement => {
+        let achievementElem = document.createElement('p');
+        achievementElem.innerText = achievement;
+
+        achievementsHolder.appendChild(achievementElem);
+    });
+
+    achievementsElem.appendChild(achievementsHolder);
 }
