@@ -419,6 +419,22 @@ footer > #modeSelector {
     width: 1em;
 }
 
+#cv > #qualifications {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+#cv > #qualifications > .qualification > .infoHolder {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#cv > #qualifications > .qualification > .infoHolder > p {
+    margin: 0;
+    padding-right: 1em;
+}
+
 #cv > #skills {
     display: flex;
     flex-direction: column;
