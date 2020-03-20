@@ -430,6 +430,10 @@ footer > #modeSelector {
     margin-left: 2em;
 }
 
+#cv > #qualifications.nontechnical > .qualification > p {
+    margin: 0.1em 0;
+}
+
 #cv > #qualifications > .qualification > .infoHolder {
     display: flex;
     flex-direction: row;
