@@ -426,8 +426,7 @@ footer > #modeSelector {
 }
 
 #cv > #qualifications.nontechnical > .qualification {
-    display: list-item;
-    margin-left: 2em;
+    border-bottom: solid thin var(--accent-color);
 }
 
 #cv > #qualifications.nontechnical > .qualification > p {
@@ -484,9 +483,7 @@ footer > #modeSelector {
 }
 
 #cv > #achievements > .achievementsHolder > p {
-    display: list-item;
-
-    margin-left: 2em;
+    border-bottom: solid thin var(--accent-color);
 }
 
 /* media queries */
