@@ -2,7 +2,7 @@
     "githubProjects": {
         "username": "amyhannahmorgan",
         "refreshInterval": 43200000,
-        "lastUpdated": 1584543201189,
+        "lastUpdated": 1584715155175,
         "projects": [
             {
                 "name": "unit-28-website",
@@ -43,6 +43,20 @@
         ],
         "qualifications": [
             {
+                "technical": true,
+                "location": "Coleg Gwent",
+                "startDate": {
+                    "year": 2019,
+                    "month": 8,
+                    "day": 1,
+                    "dateString": "01/09/19"
+                },
+                "endDate": null,
+                "qualification": "BTEC Level 3 Extended Diploma IT",
+                "grade": "DDD (predicted)"
+            },
+            {
+                "technical": true,
                 "location": "Coleg Gwent",
                 "startDate": {
                     "year": 2018,
@@ -60,21 +74,49 @@
                 "grade": "D*D*"
             },
             {
-                "location": "Coleg Gwent",
-                "startDate": {
-                    "year": 2019,
-                    "month": 8,
-                    "day": 1,
-                    "dateString": "01/09/19"
-                },
-                "endDate": null,
-                "qualification": "BTEC Level 3 Extended Diploma IT",
-                "grade": "DDD (predicted)"
+                "technical": false,
+                "qualification": "BTEC Level 3 Certificate Retail and Customer Service",
+                "grade": "Pass"
+            },
+            {
+                "technical": false,
+                "qualification": "NVQ Level 1 Customer Service",
+                "grade": "Pass"
+            },
+            {
+                "technical": false,
+                "qualification": "NVQ Level 1 IT User",
+                "grade": "Pass"
+            },
+            {
+                "technical": false,
+                "qualification": "GCSE English",
+                "grade": "B"
+            },
+            {
+                "technical": false,
+                "qualification": "GCSE Maths",
+                "grade": "C"
+            },
+            {
+                "technical": false,
+                "qualification": "GCSE Chemistry",
+                "grade": "B"
+            },
+            {
+                "technical": false,
+                "qualification": "GCSE Physics",
+                "grade": "B"
+            },
+            {
+                "technical": false,
+                "qualification": "GCSE Biology",
+                "grade": "C"
             }
         ],
         "achievements": [
             "Student's Union Memeber 2019 - 2020",
-            "Skills Wales 2020 IT Support Technician Medal Winner"
+            "Skills Wales 2020 IT Support Technician Bronze Medal Winner"
         ],
         "skills": {
             "technical": [
@@ -103,7 +145,36 @@
                     "level": 1
                 }
             ],
-            "nontechnical": []
+            "nontechnical": [
+                {
+                    "skill": "Proficient with Microsoft Office Suite",
+                    "level": null
+                },
+                {
+                    "skill": "Proficient with Adobe Photoshop and Illustraitor",
+                    "level": null
+                },
+                {
+                    "skill": "Good troubleshooting and problem solving skills",
+                    "level": null
+                },
+                {
+                    "skill": "Good at working alone, as part of a team and under pressure",
+                    "level": null
+                },
+                {
+                    "skill": "Independant learner",
+                    "level": null
+                },
+                {
+                    "skill": "Experience with hardware maintenance and repair (PCs, laptops and mobile devices)",
+                    "level": null
+                },
+                {
+                    "skill": "Experience with network setup and maintenance",
+                    "level": null
+                }
+            ]
         }
     }
 }
