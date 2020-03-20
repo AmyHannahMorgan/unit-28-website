@@ -117,8 +117,12 @@ function buildExperience(expArray) {
 
         expDates.innerText = `${startDateString} - ${endDateString}`;
 
+        let expDescription = document.createElement('p');
+        expDescription.innerText = expArray[i].jobDescription;
+
         expHolder.appendChild(expTitle);
         expHolder.appendChild(expDates);
+        expHolder.appendChild(expDescription);
         experienceElem.appendChild(expHolder);
     }
 }
