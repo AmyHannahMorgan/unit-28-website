@@ -1,0 +1,72 @@
+@media only print {
+    /* tags */
+    body {
+        --text-color: #0f0f0f;
+
+        background-color: transparent;
+    }
+
+    header {
+        display: none;
+    }
+
+    footer {
+        display: none;
+    }
+
+    h1 {
+        font-size: 18pt;
+    }
+
+    h2 {
+        font-size: 16pt;
+    }
+
+    p {
+        font-size: 11pt;
+    }
+
+    main {
+        margin: 0;
+
+        max-height: 100%;
+    }
+
+    /* classes */
+    .footerModal {
+        display: none !important;
+    }
+
+    /* ids */
+    #cv {
+
+    }
+
+    #cv > #header {
+
+    }
+
+    #cv > #header > .title {
+        display: block;
+
+        font-size: 28pt;
+        text-align: center;
+    }
+
+    #cv > #header > .contacts {
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    #cv > #skills {
+        float: left;
+        width: 49%;
+    }
+
+    #cv > #achievements {
+        float: right;
+        width: 49%;
+    }
+}
