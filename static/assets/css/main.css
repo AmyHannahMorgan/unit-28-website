@@ -45,10 +45,18 @@ h2, h3 {
     padding-left: 0.5rem;
 }
 
-p {
+p, label, input {
     color: var(--text-color);
 
     font-family: 'Titillium Web';
+}
+
+label, input {
+    margin: 0.25em 0;
+}
+
+form > .smallText, form > .largeText {
+    width: 100%;
 }
 
 main {
