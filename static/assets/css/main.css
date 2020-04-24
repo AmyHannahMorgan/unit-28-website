@@ -59,6 +59,14 @@ form > .smallText, form > .largeText {
     width: 100%;
 }
 
+form > .button {
+    border: solid thin transparent;
+    border-radius: 12.5%;
+    padding: 0.25em;
+    background-color: var(--accent-color);
+    color: #ebe3c9;
+}
+
 main {
     margin: 1rem;
 
