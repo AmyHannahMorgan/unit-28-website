@@ -73,6 +73,11 @@ main {
     min-height: 100vh;
 }
 
+main img {
+    object-fit: contain;
+    width: 50%;
+}
+
 header {
     min-width: 100vw;
     max-width: 100vw;
@@ -369,6 +374,16 @@ footer > #modeSelector {
 }
 
 /* IDs */
+#personalImage {
+    object-fit: cover;
+    width: 50vmin;
+    max-width: 250px;
+    height: 50vmin;
+    max-height: 250px;
+    border: medium solid var(--accent-color);
+    border-radius: 50%;
+}
+
 #cookiesModal {
     display: flex;
     flex-direction: column;
