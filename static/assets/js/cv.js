@@ -29,12 +29,9 @@ else if(qualificationsElem !== null) {
     request.open('GET', `${apiAddress}/cv/qualifications`);
     request.addEventListener('load', e => {
         let quals = JSON.parse(e.target.response);
-        buildQualifications(quals);
+        buildQualifications(quals, false);
     });
     request.send();
-}
-else if(achievementsElem !== null) {
-
 }
 
 function buildQualifications(qualArray, technical) {
