@@ -12,6 +12,9 @@ if(Date.now() >= data.githubProjects.lastUpdated + data.githubProjects.refreshIn
     updateProjects(data.githubProjects.projects, data.githubProjects.refreshInterval, data);
 }
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 app.get('/api/projects', (req, res) => {
     res.send(data.githubProjects.projects);
 });
@@ -37,6 +40,11 @@ app.get('/api/cv/qualifications', (req, res) => {
 
 app.get('/api/cv/achievements', (req, res) => {
     res.send(data.cv.achievements);
+});
+
+app.post('/contact', (req, res) => {
+    console.log(req.body);
+    res.redirect('/');
 });
 
 app.use(express.static(`${__dirname}/static`));
